@@ -41,9 +41,14 @@ After predicting your song's cluster, the AI DJ recommends real songs from the d
    pip install pandas numpy matplotlib seaborn scikit-learn streamlit plotly jupyterlab
    ```
 
-2. **Data & Artifact Check**
-   Ensure `Final_Amazon_Music_Project.csv`, `kmeans_model.pkl`, and `scaler.pkl` are present in the directory.
-   *(If not, re-run `music_clustering.ipynb` to generate the CSV, and `python train_model.py` to generate the pickle files).*
+2. **Generate the Machine Learning Models**
+   > **Note:** The trained `.pkl` model files are **not** included in this repository. You must generate them before running the app!
+   
+   Run the training script to export the `KMeans` model and `StandardScaler` to your local directory:
+   ```bash
+   python train_model.py
+   ```
+   *(Ensure `Final_Amazon_Music_Project.csv` is present. If it's missing, re-run `music_clustering.ipynb` first).*
 
 3. **Launch the App**
    ```bash
