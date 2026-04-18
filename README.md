@@ -68,4 +68,4 @@ After predicting your song's cluster, the AI DJ recommends real songs from the d
 Contributions, visualizations improvements, or bug fixes are welcome. Please open an issue or pull request.
 
 ## 📜 License
-*Please insert your preferred license.*
+*Created by Farooque*
