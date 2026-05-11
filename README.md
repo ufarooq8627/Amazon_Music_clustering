@@ -1,5 +1,7 @@
 # 🎵 Amazon Music Clustering: The AI DJ
 
+**🌐 Try the Live App:** [https://amazonmusicclustering.streamlit.app/](https://amazonmusicclustering.streamlit.app/)
+
 An end-to-end Machine Learning project that performs unsupervised clustering on Amazon music data and deploys the insights via an interactive Streamlit application. The app classifies songs into 5 distinct "vibes", allows you to view the PCA map, and features a "Predict My Song's Cluster" engine.
 
 ## 📸 Application Screenshots
@@ -41,14 +43,13 @@ After predicting your song's cluster, the AI DJ recommends real songs from the d
    pip install pandas numpy matplotlib seaborn scikit-learn streamlit plotly jupyterlab
    ```
 
-2. **Generate the Machine Learning Models**
-   > **Note:** The trained `.pkl` model files are **not** included in this repository. You must generate them before running the app!
+2. **Data & Artifact Check**
+   The trained `.pkl` model files (`kmeans_model.pkl` and `scaler.pkl`) are already included in this repository so you can launch the app immediately!
    
-   Run the training script to export the `KMeans` model and `StandardScaler` to your local directory:
+   *(Optional) If you wish to retrain the models from scratch:*
    ```bash
    python train_model.py
    ```
-   *(Ensure `Final_Amazon_Music_Project.csv` is present. If it's missing, re-run `music_clustering.ipynb` first).*
 
 3. **Launch the App**
    ```bash
@@ -68,4 +69,4 @@ After predicting your song's cluster, the AI DJ recommends real songs from the d
 Contributions, visualizations improvements, or bug fixes are welcome. Please open an issue or pull request.
 
 ## 📜 License
-*Created by Farooque*
+*Please insert your preferred license.*

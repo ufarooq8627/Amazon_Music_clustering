@@ -179,7 +179,7 @@ for i, cid in enumerate(sorted(profiles.keys())):
             <div style="font-size:2rem; line-height:1;">{vibe_label.split()[0]}</div>
             <div style="color:{vibe_color}; font-weight:700; margin:0.4rem 0;
                         font-size:0.95rem;">{' '.join(vibe_label.split()[1:])}</div>
-            <div style="font-size:0.72rem; color:#555; margin-top:0.3rem;">{profiles[cid]}</div>
+            <div style="font-size:0.72rem; color:#cbd5e1; margin-top:0.3rem;">{profiles[cid]}</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -211,9 +211,9 @@ fig_bar = px.bar(
 fig_bar.update_layout(
     paper_bgcolor='rgba(0,0,0,0)',
     plot_bgcolor='rgba(0,0,0,0)',
-    font_color='#333',
-    xaxis=dict(gridcolor='#e2e8f0', tickangle=-30),
-    yaxis=dict(gridcolor='#e2e8f0', range=[0, 1]),
+    font_color='#e2e8f0',
+    xaxis=dict(gridcolor='#1e293b', tickangle=-30),
+    yaxis=dict(gridcolor='#1e293b', range=[0, 1]),
     legend_title_text='Cluster'
 )
 st.plotly_chart(fig_bar, use_container_width=True)
@@ -257,7 +257,6 @@ Enter the **audio features** of any song and the trained **KMeans model** will p
 which cluster it belongs to — exactly how it was trained in the notebook!
 """)
 
-st.markdown('<div class="predict-box">', unsafe_allow_html=True)
 
 #   Song Name Input 
 song_name = st.text_input(
@@ -329,7 +328,6 @@ for col, feat in zip(r2_cols, row2_features):
             key=f"slider_{feat}"
         )
 
-st.markdown('</div>', unsafe_allow_html=True)
 
 #   PREDICT BUTTON         
 predict_col, _, _ = st.columns([1, 2, 2])
